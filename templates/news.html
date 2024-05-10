@@ -1,0 +1,988 @@
+{% load static %} 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="news.css" />
+  </head>
+  <body>
+    <h1>Latest News</h1>
+    <h2>Cryptocurrency News</h2> -->
+    <!-- <div class="blog-base-1">
+      <div class="blog-img-content-base">
+        <div class="news-img1"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p>
+      </div>
+
+      <div class="blog-img-content-base">
+        <div class="news-img2"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p>
+      </div>
+
+      <div class="blog-img-content-base">
+        <div class="news-img3"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p>
+      </div>
+    </div>
+    <h2>Stock News</h2> -->
+    <!-- <div class="blog-base-2">
+      <div class="blog-img-content-base">
+        <div class="news-img4"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p> -->
+      <!-- </div>
+      <div class="blog-img-content-base">
+        <div class="news-img5"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p>
+      </div> -->
+      <!-- <div class="blog-img-content-base">
+        <div class="news-img6"></div>
+        <br />
+        <p class="blog-img-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
+          illum adipisci nesciunt aliquid minima laudantium laboriosam est
+          eveniet ex provident assumenda nemo, repudiandae mollitia magnam vel
+          modi nihil, obcaecati animi.
+        </p> -->
+      <!-- </div>
+    </div>
+  </body>
+</html> --> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 style="margin-left: 50px; margin-top: 10px; color: black;"><b>News</b></h1>
+    <br />
+    <br />
+    
+    <div class="container" >
+      <div class="row content" style="margin-left: 30px;" >
+        <div class="card my-4 mx-2" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+</div>
+</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const fetchNews = async (page) => {
+        console.log("Fetching news....");
+        var url = 'https://newsapi.org/v2/everything?' +
+            'q=Apple&' +
+            'from=2024-04-04' +
+            
+            'pageSize=20&' +
+            'language=en&' +
+            'page=' +page +
+            '&sortBy=popularity&' +
+            'apiKey=5d38e082fae54ff5ab7b821495fc3572';
+
+  var req = new Request(url);
+  // console.log(response)
+  let response = {
+  "status": "ok",
+  "totalResults": 53376,
+  "articles": [
+    
+    
+    
+    
+    
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Brenda Stolyar",
+      "title": "Best AirPods (2024): Which Apple Headphones Should You Buy?",
+      "description": "Should you go AirPods Pro or AirPods Max? Apple sells several headphones—even Beats—so we break it all down to help you find the best buds for your ears.",
+      "url": "https://www.wired.com/gallery/best-airpods/",
+      "urlToImage": "https://media.wired.com/photos/65ea057df050a40d5b415477/191:100/w_2580,c_limit/AirPods-Guide-Gear.jpg",
+      "publishedAt": "2024-03-17T11:00:00Z",
+      "content": "If you're hunting for your first pair of AirPods, you may have a few questions, such as proper cleaning methods and how to tinker with certain settings. We've got some answers to a handful of common … [+5277 chars]"
+    },
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Kate O'Flaherty",
+      "title": "You Should Update Apple iOS and Google Chrome ASAP",
+      "description": "Plus: Microsoft patches over 60 vulnerabilities, Mozilla fixes two Firefox zero-day bugs, Google patches 40 issues in Android, and more.",
+      "url": "https://www.wired.com/story/apple-ios-google-chrome-critical-update-march/",
+      "urlToImage": "https://media.wired.com/photos/66072aed36e307ecf6fc3e75/191:100/w_1280,c_limit/032924-security-critical-updates-march.jpg",
+      "publishedAt": "2024-03-31T10:00:00Z",
+      "content": "Its time to check your software updates. March has seen the release of important patches for Apples iOS, Googles Chrome, and its privacy-conscious competitor Firefox. Bugs have also been squashed by … [+3528 chars]"
+    },
+   
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Caroline Haskins",
+      "title": "Apple Store Employees Say Coworkers Were Disciplined for Supporting Palestinians",
+      "description": "A protest is planned Saturday at a Chicago Apple store where workers say managers disciplined staff—and fired an employee—for wearing pins, bracelets, or keffiyeh in support of Palestinian people.",
+      "url": "https://www.wired.com/story/apple-store-employees-disciplined-supporting-palestinians/",
+      "urlToImage": "https://media.wired.com/photos/660b3d3fd376bb0b921ed38a/191:100/w_1280,c_limit/business_apple_employees_palestine_letter.jpg",
+      "publishedAt": "2024-04-02T11:00:00Z",
+      "content": "Nearly 300 current and former Apple employees have published an open letter alleging that several retail and corporate employees of the company have been disciplined or wrongfully terminated for expr… [+2976 chars]"
+    },
+    
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Simon Hill",
+      "title": "7 Ways the Apple Antitrust Case Could Change Your iPhone",
+      "description": "The US Department of Justice lawsuit could force Apple to play nice with Android—with major implications for the iPhone.",
+      "url": "https://www.wired.com/story/us-lawsuit-apple-iphone-changes/",
+      "urlToImage": "https://media.wired.com/photos/65fd938446a2d8ffa84617aa/191:100/w_1280,c_limit/7-Ways-the-US-Lawsuit-Against-Apple-Could-Change-Your-iPhone-Gear-GettyImages-1544679020.jpg",
+      "publishedAt": "2024-03-22T15:09:09Z",
+      "content": "If Apple opened this up, you could use a cross-platform digital wallet of your choice, making it easier to switch smartphones. You could also use digital car keys in your car manufacturers cross-plat… [+3360 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Mariella Moon,Lawrence Bonk",
+      "title": "Justice Department files antitrust lawsuit against Apple over its infamous 'walled garden'",
+      "description": "The US Department of Justice and more than a dozen states have filed a lawsuit against Apple in federal court, accusing it of violating antitrust laws by making its hardware and software products largely inaccessible to competitors. Apple's \"walled garden\" ap…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_689978a9-5e2e-47fa-b450-f3bef3d1eced",
+      "urlToImage": null,
+      "publishedAt": "2024-03-21T14:48:34Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Wes Davis",
+      "title": "Apple may not do a spring event this year",
+      "description": "Despite having a lot to show off this spring, including OLED iPad Pros, bigger iPad Airs, and new MacBook Airs, Apple may hold off on its spring event this year.",
+      "url": "https://www.theverge.com/2024/3/3/24089196/apple-no-spring-event-planned-macbook-air-ipad",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/H677yLcdetO3X15Cqi-RGvXVgvc=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/23951261/VRG_Illo_N_Barclay_5_apple.jpg",
+      "publishedAt": "2024-03-03T14:59:21Z",
+      "content": "Apple may not do a spring event this year\r\nApple may not do a spring event this year\r\n / Apple has a lot coming this spring, but reportedly wont be showcasing it.\r\nByWes Davis, a weekend editor who c… [+2857 chars]"
+    },
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "David Nield",
+      "title": "How Apple's Advanced Data Protection Works, and How to Enable It on Your iPhone",
+      "description": "The files stored on iCloud and on your iPhone, iPad, and Mac are already pretty well secured. But if you want the best protection against hackers, snoops, and spooks, turn on ADP.",
+      "url": "https://www.wired.com/story/how-apple-advanced-data-protection-works-and-how-to-turn-it-on/",
+      "urlToImage": "https://media.wired.com/photos/65eb626d9ef3b191272601ca/191:100/w_1280,c_limit/iPhone-Advanced-Data-Protection-Gear.jpg",
+      "publishedAt": "2024-03-11T11:30:00Z",
+      "content": "ADP extends that protection pretty considerably to also cover your iCloud backups, iCloud Drive, and the information in Photos, Notes, and Reminders. Without ADP enabled, this data is still encrypted… [+2833 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Oscar Gonzalez",
+      "title": "Apple Reportedly Spent 3 Years Trying to Make Apple Watch for Android",
+      "description": "Apple was hit with a major antitrust lawsuit filed by the DOJ on Thursday. The iPhone maker was accused of creating a monopoly with the iPhone, but other devices were mentioned including the Apple Watch. U.S. Attorney General Merrick Garland says the smartwat…",
+      "url": "https://gizmodo.com/apple-reportedly-spent-3-years-trying-to-make-apple-wat-1851356959",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/51daddfd8a613627aa8bfbcbfdb3048a.png",
+      "publishedAt": "2024-03-21T20:55:00Z",
+      "content": "Apple was hit with a major antitrust lawsuit filed by the DOJ on Thursday. The iPhone maker was accused of creating a monopoly with the iPhone, but other devices were mentioned including the Apple Wa… [+1603 chars]"
+    },
+    
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Boone Ashworth",
+      "title": "How an iPhone Powered by Google’s Gemini AI Might Work",
+      "description": "Supercharged Siri. AI image editing. Smart “snapshots” of your day. We asked some experts to forecast how Apple might use Google’s Gemini platform to enable new AI-powered applications in iOS.",
+      "url": "https://www.wired.com/story/apple-google-gemini-iphone/",
+      "urlToImage": "https://media.wired.com/photos/660724a05190682e25a9a479/191:100/w_1280,c_limit/gear_apple_iphone_google_gemini_ai.jpg",
+      "publishedAt": "2024-04-01T11:00:00Z",
+      "content": "So, assuming the deal does go through, what might Gemini look like on the iPhone?\r\nFirst off, Gartenberg says it will likely manifest with a distinctly un-Apple label.\r\nIt would probably be something… [+3206 chars]"
+    },
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Makena Kelly, Vittoria Elliott",
+      "title": "The Antitrust Case Against Apple Argues It Has a Stranglehold on the Future",
+      "description": "The Department of Justice antitrust lawsuit against Apple says the company's grip on iPhone users and developers is company blocking future innovation in tech.",
+      "url": "https://www.wired.com/story/antitrust-case-apple-stranglehold-on-the-future/",
+      "urlToImage": "https://media.wired.com/photos/65fc73d4c67e8191e63ca491/191:100/w_1280,c_limit/DOJ-Apple-Antitrust-Case-Business-2095067428.jpg",
+      "publishedAt": "2024-03-21T21:54:12Z",
+      "content": "The US Department of Justice had long been expected to file an antitrust lawsuit against Apple. But when the suit arrived Thursday, it came with surprising ferocity.\r\nIn a press conference, attorney … [+3423 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "David Nield",
+      "title": "How to get more battery life out of your Wear OS smartwatch",
+      "description": "Manufacturers are putting battery-saving tweaks into software, like the Low Power Mode you’ll find on the Apple Watch. They’re available on Wear OS, too.",
+      "url": "https://www.theverge.com/24101912/wearos-watch-pixel-battery-how-to",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/nioG4i7yQyqkEjDJGfv9GJkXjSU=/0x0:3000x2001/1200x628/filters:focal(1500x1001:1501x1002)/cdn.vox-cdn.com/uploads/chorus_asset/file/24140601/HT024_Pixel_Watch_01.jpg",
+      "publishedAt": "2024-03-18T15:30:52Z",
+      "content": "Illustration by Samar Haddad / The Verge\r\n\n \n\n Some days away from the home or office can seem like a constant battle against battery life: your phone is dying, your laptop is dying, and your smartwa… [+6245 chars]"
+    },
+    {
+      "source": { "id": null, "name": "[Removed]" },
+      "author": null,
+      "title": "[Removed]",
+      "description": "[Removed]",
+      "url": "https://removed.com",
+      "urlToImage": null,
+      "publishedAt": "1970-01-01T00:00:00Z",
+      "content": "[Removed]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Kris Holt",
+      "title": "Apple will allow iOS apps to be distributed on websites in the EU",
+      "description": "Days after Apple started allowing iOS users in the EU to use third-party app stores\r\n, the company has announced more changes related to how developers can distribute their apps. Most significantly, those who meet certain criteria will be able to let users do…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_477c437f-9e45-4982-a437-c1217bfc5092",
+      "urlToImage": null,
+      "publishedAt": "2024-03-12T14:15:26Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Mat Smith",
+      "title": "The Morning After: Apple reinstates Fortnite creator's developer account after two-day ban",
+      "description": "Apple has reversed its decision to ban Epic Games’ developer account after it emerged that European Union officials were investigating the issue. And the EU is currently fining Apple for almost two billion dollars, so it's probably wise to pay attention.\nThis…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_f5b4ba6a-3e55-4f1d-9144-832ccce7ee86",
+      "urlToImage": null,
+      "publishedAt": "2024-03-11T11:45:05Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Jeff Dunn",
+      "title": "The best Apple deals we could find during the Amazon Big Spring Sale",
+      "description": "Amazon has kicked off its latest multi-day deals event, dubbed the Big Spring Sale. The retailer's latest attempt at stirring up sales isn't as big on tech deals as its summer Prime Day event, but it still has a few gadget discounts of note, which we're round…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_c46c180f-9c2f-4df1-bb17-21c620c95da2",
+      "urlToImage": null,
+      "publishedAt": "2024-03-20T11:00:27Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Jon Porter",
+      "title": "Apple’s AI ambitions could include Google or OpenAI",
+      "description": "Apple has reportedly held discussions with Google to bring its Gemini generative AI technology to the iPhone and has also considered using OpenAI’s ChatGPT.",
+      "url": "https://www.theverge.com/2024/3/18/24104626/apple-license-google-gemini-generative-ai-openai-chatgpt",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/AznF8_8PWIM-17iDULo4aihqkv8=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/24931975/236794_iPhone_15_pro_pro_Max_VPavic_0019.jpg",
+      "publishedAt": "2024-03-18T09:30:34Z",
+      "content": "Apples AI ambitions could include Google or OpenAI\r\nApples AI ambitions could include Google or OpenAI\r\n / The iPhone-maker is in active talks to bring Gemini to the iPhone, and has also considered u… [+2452 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Jeff Dunn",
+      "title": "Amazon Big Spring Sale: The best deals on AirPods, Apple Watches, MacBooks, iPads and more",
+      "description": "Amazon's latest multi-day deals event, the Big Spring Sale, is going on right now. While not as heavy on tech deals as regular Prime Day is, there are some good discounts available on tech we recommend, including a number of Apple devices. In truth, the picki…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_835cb22f-8451-4a2b-97cb-0970511738b7",
+      "urlToImage": null,
+      "publishedAt": "2024-03-21T14:15:36Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Jeff Dunn,Valentina Palladino",
+      "title": "Amazon Big Spring Sale: 20 early deals from Apple, Sonos and Sony you can shop today",
+      "description": "Amazon’s first Big Spring Sale in the US begins tomorrow, but we’re already starting to see some electronics deals trickle in. Admittedly, tech isn’t at the forefront of this event (unlike Prime Day, where we usually see a healthy number of tech discounts). A…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_293838ae-9f6a-440c-97d0-eeadc0c9f0ff",
+      "urlToImage": null,
+      "publishedAt": "2024-03-19T07:00:36Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Jeff Dunn",
+      "title": "The best Amazon Big Spring Sale tech deals on AirPods, Apple Watches, MacBooks, iPads and more",
+      "description": "The Amazon Big Spring Sale is in full swing. While not as heavy on tech deals as regular Prime Day is, there are some good Amazon deals available on tech we recommend, including a number of Apple devices. In truth, the pickings are pretty slim — and most of t…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_876e45f3-8195-4290-9a17-ff3af069186e",
+      "urlToImage": null,
+      "publishedAt": "2024-03-22T19:35:36Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Lauren Goode, Michael Calore, Kate Knibbs",
+      "title": "'3 Body Problem' Is a Tech-Heavy Head Trip",
+      "description": "This week, we discuss how the new (very good) Netflix series '3 Body Problem' fits into the sci-fi pantheon.",
+      "url": "https://www.wired.com/story/gadget-lab-podcast-637/",
+      "urlToImage": "https://media.wired.com/photos/65fb6137835d404798e536c2/191:100/w_1280,c_limit/3BP_103_Unit_03306RC.jpg,3BP_103_Unit_03306RC.jpg",
+      "publishedAt": "2024-03-21T12:00:00Z",
+      "content": "Michael Calore: OK Kate, as our guest, what's your recommendation this week?\r\nKate Knibbs: Actually, I'm going to recommend another sci-fi series that's a book adaptation and I wrote about it when I … [+3102 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "David Pierce",
+      "title": "Hello and goodbye to the MacBook Air",
+      "description": "What’s new (and missing) in Apple’s new MacBook laptops, Big Tech’s future in the EU, iOS 17.4, the Elon Musk / OpenAI lawsuit, and much more on this episode of The Vergecast.",
+      "url": "https://www.theverge.com/2024/3/7/24092878/apple-macbook-air-m3-eu-dma-apple-musk-openai-vergecast",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/2zkOPh3dt7YBwsvdUhSek7mHy8c=/0x0:3000x2000/1200x628/filters:focal(1500x1000:1501x1001)/cdn.vox-cdn.com/uploads/chorus_asset/file/25322649/VST_0307_Site_post.jpg",
+      "publishedAt": "2024-03-07T13:59:17Z",
+      "content": "Image: Alex Parkin / The Verge\r\n\n \n\n Apple announced two new MacBook Air models this week, with spec upgrades across the board — and a bunch of confusing ideas about how your laptop can be great at A… [+3199 chars]"
+    },
+    
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Joanna Nelius",
+      "title": "The M3 MacBook Air has a familiar look",
+      "description": "The all-new 13-inch and 15-inch Apple MacBook Air M3s can drive two displays with the lid closed but still have a ton in common with the M2 models.",
+      "url": "https://www.theverge.com/24092910/apple-macbook-air-m3-first-impressions",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/iQQ9uTaPhLEYhg8QMBLC0Rtoo0g=/0x0:2040x1187/1200x628/filters:focal(1020x594:1021x595)/cdn.vox-cdn.com/uploads/chorus_asset/file/25322167/DSCF6617.jpg",
+      "publishedAt": "2024-03-07T14:00:00Z",
+      "content": "The midnight color still smudges, but the M3 processor gives it a speed boost.\r\nByJoanna Nelius, laptop reviewer. She has covered consumer technology, with an emphasis on PC gaming, since 2018. Previ… [+3502 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Brandon Widder",
+      "title": "Some of the best Switch games are $20 off in the lead-up to Mario Day",
+      "description": "A handful of Mario-centric titles are currently on sale ahead of Mario Day this weekend. You can also save on Ugreen’s 2-in-1 charging station and a terrific Apple Pencil alternative.",
+      "url": "https://www.theverge.com/2024/3/7/24092444/mario-kart-8-deluxe-ugreen-magsafe-charging-stand-logitech-crayon-stylus-deal-sale",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/ehzOuAqDpR5pYEKJ1rmBmqhNVkk=/0x0:1280x720/1200x628/filters:focal(640x360:641x361)/cdn.vox-cdn.com/uploads/chorus_asset/file/24825649/WiiU_MK8_screenshots_11_bmp_jpgcopy.jpg",
+      "publishedAt": "2024-03-07T18:41:41Z",
+      "content": "Some of the best Switch games are $20 off in the lead-up to Mario Day\r\nSome of the best Switch games are $20 off in the lead-up to Mario Day\r\n / You can also save on a great Apple Pencil alternative,… [+5361 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "David Pierce",
+      "title": "The 2024 Vergecast streaming draft",
+      "description": "From TikTok and Instagram to Netflix and Hulu to Prime Video and Apple TV Plus, the Vergecast crew picks the best streaming services in 2024 — and looks ahead to 2025.",
+      "url": "https://www.theverge.com/2024/3/12/24098343/best-streaming-services-2024-netflix-tiktok-max-disney-vergecast",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/5hOIBDCuxlh1MnIDzu_CsObw1h4=/0x0:3000x2000/1200x628/filters:focal(1500x1000:1501x1001)/cdn.vox-cdn.com/uploads/chorus_asset/file/25331615/VST_0311_Site_Post.jpg",
+      "publishedAt": "2024-03-12T12:56:57Z",
+      "content": "The 2024 Vergecast streaming draft\r\nThe 2024 Vergecast streaming draft\r\n / What are the good streaming services? Why does Alex Cranz think Netflix is going to go away? What is Mubi, anyway? All the b… [+2616 chars]"
+    },
+    
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Victoria Song",
+      "title": "Now Apple Vision Pro Personas can float freely across different apps",
+      "description": "Apple’s rolling out spatial Personas, which allow you to collaborate, watch movies, and play games with another user through SharePlay-enabled apps.",
+      "url": "https://www.theverge.com/2024/4/2/24118863/apple-vision-pro-spatial-persona-shareplay",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/bPdBH5IoiyXuc5NVItU05ctG20w=/0x0:3840x2160/1200x628/filters:focal(1920x1080:1921x1081)/cdn.vox-cdn.com/uploads/chorus_asset/file/25367116/Collaborate_with_Freeform_and_Spatial_Persona.mov_snapshot_00.12.381.jpg",
+      "publishedAt": "2024-04-02T15:35:46Z",
+      "content": "Now Apple Vision Pro Personas can float freely across different apps\r\nNow Apple Vision Pro Personas can float freely across different apps\r\n / With VisionOS 1.1, you can enable spatial Personas and c… [+1481 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Maxwell Zeff",
+      "title": "All Signs Point to Apple TV+ Getting Ads",
+      "description": "Apple TV+ is the last major streaming service that doesn’t have an ad-supported tier, but that seems poised to change. Apple just hired a 14-year ad executive from NBCUniversal, Joseph Cady, to further beef up its growing video advertising team, according to …",
+      "url": "https://gizmodo.com/all-signs-point-apple-tv-plus-getting-ads-1851326356",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/914d7ecd1b21baf0b03440017c7e5f03.jpg",
+      "publishedAt": "2024-03-11T20:30:00Z",
+      "content": "Apple TV+ is the last major streaming service that doesnt have an ad-supported tier, but that seems poised to change. Apple just hired a 14-year ad executive from NBCUniversal, Joseph Cady, to furthe… [+2498 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Jody Serrano",
+      "title": "Apple Users Are Getting Bombarded With ‘Reset Password’ Requests",
+      "description": "Apple users are being targeted by an elaborate and annoying phishing scam that aims to change their password and lock them out of their devices, according to a new report from Krebs on Security. In some cases, the scammers have even called individuals and pre…",
+      "url": "https://gizmodo.com/apple-reset-password-phishing-scam-iphone-spoofing-call-1851370115",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e0059693a843d8273fad6a584deefd1f.jpg",
+      "publishedAt": "2024-03-27T20:45:00Z",
+      "content": "Apple users are being targeted by an elaborate and annoying phishing scam that aims to change their password and lock them out of their devices, according to a new report from Krebs on Security. In s… [+3254 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Thomas Germain",
+      "title": "Doctors Are Using the Apple Vision Pro During Surgery",
+      "description": "A medical team at Cromwell Hospital in London strapped on the $3,500 Apple Vision Pro during two spinal surgeries. Doctor’s are calling the device a “game-changing” tool, beefing up Apple’s claims that the headset has a future as a medical device.Read more...",
+      "url": "https://gizmodo.com/doctors-are-using-the-apple-vision-pro-during-surgery-1851329884",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d51113d47d60aa8c1198e970216a5643.jpg",
+      "publishedAt": "2024-03-12T21:50:00Z",
+      "content": "A medical team at Cromwell Hospital in London strapped on the $3,500 Apple Vision Pro during two spinal surgeries. Doctors are calling the device a game-changing tool, beefing up Apples claims that t… [+2071 chars]"
+    },
+    
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Maxwell Zeff",
+      "title": "Jon Stewart Confirms Apple Wouldn't Let Him Do Show on AI With FTC Chair",
+      "description": "Jon Stewart interviewed Federal Trade Commission Chair Lina Khan on Monday night’s episode of The Daily Show, alongside a segment on how artificial intelligence is taking jobs. Stewart says Apple wouldn’t let him do either on his Apple TV show The Problem wit…",
+      "url": "https://gizmodo.com/jon-stewart-confirms-apple-show-ai-with-ftc-chair-1851380884",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/15d099f64d34ccaf4bc2762caaaeb793.jpg",
+      "publishedAt": "2024-04-02T13:40:00Z",
+      "content": "Jon Stewart interviewed Federal Trade Commission Chair Lina Khan on Monday nights episode of The Daily Show, alongside a segment on how artificial intelligence is taking jobs. Stewart says Apple woul… [+2688 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Engadget",
+      "title": "Amazon Big Spring Sale: Save up to 50 percent on tech from Apple, Anker, Sony and others",
+      "description": "The Amazon Big Spring Sale is in full swing, and among the slew of clothing, outdoor and home products on discount, there are a few good tech deals to be had. Unlike regular Prime Day, the Big Spring Sale is not exclusive to Prime members, which is great for …",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_2a3c3a4a-46da-4cac-a315-4c31bf082736",
+      "urlToImage": null,
+      "publishedAt": "2024-03-24T16:55:36Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Will Shanklin",
+      "title": "An OLED iPad Pro and the first big-screen iPad Air will reportedly arrive in May",
+      "description": "Apple will finally launch new iPads in early May, according to Bloomberg’s Mark Gurman. Expected are a new iPad Pro with an OLED display and a faster iPad Air, including a 12.9-inch model for the first time in that lineup. The details of the upcoming iPad mod…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_47920237-58bb-480a-a350-bc5332ca6ca8",
+      "urlToImage": null,
+      "publishedAt": "2024-03-28T20:40:56Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Maxwell Zeff",
+      "title": "Apple Crushes Epic’s App Store Dreams Over the CEO’s Petty Tweets",
+      "description": "There’s petty, and then there’s Apple’s beef with Epic Games. Apple terminated Epic’s developer account on Wednesday, blocking the company’s ability to make its own Epic Games Store for iOS. Why? All because CEO Tim Sweeney wouldn’t stop dunking on Apple’s un…",
+      "url": "https://gizmodo.com/apple-crushes-epics-app-store-dreams-ceo-s-petty-tweets-1851312958",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/a7123879ad961f10d91af40fcd5b8b85.jpg",
+      "publishedAt": "2024-03-06T19:30:00Z",
+      "content": "Theres petty, and then theres Apples beef with Epic Games. Apple terminated Epics developer account on Wednesday, blocking the companys ability to make its own Epic Games Store for iOS. Why? All beca… [+2426 chars]"
+    },
+    
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Jeff Dunn",
+      "title": "The best deals on AirPods, MacBooks, iPads and more during Amazon's Spring Sale",
+      "description": "Amazon has kicked off its latest multi-day deals event, dubbed the Big Spring Sale. Although this event isn't nearly as heavy on tech deals as summer Prime Day, there are still a few good gadget discount to note. If you're specifically looking for a new Apple…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_7854a73f-76f9-40a4-b204-9591ced64882",
+      "urlToImage": null,
+      "publishedAt": "2024-03-20T15:46:27Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Jennifer Pattison Tuohy",
+      "title": "Smart home hubs: what they are and why you need one",
+      "description": "Many of the frustrations you may have encountered with the smart home can be solved with a good smart home hub that has robust local control.",
+      "url": "https://www.theverge.com/24087882/smart-home-hub-apple-google-alexa",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/UBYljyB5NBA29N4jZGLHTocmARE=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/25307582/246980_SMART_HOME_WEEK_HUBS_AAstorgano.jpg",
+      "publishedAt": "2024-03-07T14:00:00Z",
+      "content": "Illustration by Adrián Astorgano\r\n\n \n\n\n If you’re planning a truly smart home, then you’re going to need a smart hub. Here’s what you need to know. \n\r\n\n \r\n\n\r\n\n\n\n\nfunction LedeVideo(props) {\nreturn (\n… [+21818 chars]"
+    },
+    {
+      "source": { "id": null, "name": "[Removed]" },
+      "author": null,
+      "title": "[Removed]",
+      "description": "[Removed]",
+      "url": "https://removed.com",
+      "urlToImage": null,
+      "publishedAt": "1970-01-01T00:00:00Z",
+      "content": "[Removed]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Dua Rashid",
+      "title": "How to Restart an iPad",
+      "description": "Just as screenshotting on an iPad works, restarting an iPad works differently on devices with and without a home button.Read more...",
+      "url": "https://gizmodo.com/how-to-restart-ipad-1851367649",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/dea271e5821357d77f8d0a4ec5f8517e.jpg",
+      "publishedAt": "2024-03-27T19:00:00Z",
+      "content": "Just as screenshotting on an iPad works, restarting an iPad works differently on devices with and without a home button.\r\nFor some context, your iPad will have a home button if its an iPad Pro from 2… [+1359 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Oscar Gonzalez",
+      "title": "AirPods Pro Hearing Aid Mode Might Show Up in iOS 18",
+      "description": "AirPods Pro is great for drowning out the people around you, but the earbuds can also work similarly to a hearing aid. In the upcoming iOS 18 release, the AirPods Pro might go all-in with helping those who are hard of hearing. A hearing aid mode will reported…",
+      "url": "https://gizmodo.com/airpods-pro-hearing-aid-mode-might-show-up-in-ios-18-1851325492",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/dfc675ff95840edf4eb7547d9ef5bfc9.jpg",
+      "publishedAt": "2024-03-11T16:50:00Z",
+      "content": "AirPods Pro is great for drowning out the people around you, but the earbuds can also work similarly to a hearing aid. In the upcoming iOS 18 release, the AirPods Pro might go all-in with helping tho… [+1479 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Drops Plans to Develop MicroLED Displays for Apple Watch",
+      "description": "Apple has ended a project to develop microLED displays in-house, according to Bloomberg's Mark Gurman in a reversal of his prior reporting on the development of the technology. Apple invested billions in developing microLED displays, with plans to first add m…",
+      "url": "https://www.macrumors.com/2024/03/22/apple-ends-microled-apple-watch-development/",
+      "urlToImage": "https://images.macrumors.com/t/AtVTIwOXVQvqTdzRP2RnitWb71U=/2500x/article-new/2024/03/apple-watch-ultra-2-purple.jpg",
+      "publishedAt": "2024-03-22T17:38:55Z",
+      "content": "Apple has ended a project to develop microLED displays in-house, according to Bloomberg's Mark Gurman in a reversal of his prior reporting on the development of the technology. Apple invested billion… [+1944 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Maxwell Zeff",
+      "title": "Apple Vision Pro’s Creepy Avatars Can Now Invade Your Personal Space",
+      "description": "The Apple Vision Pro’s Spatial Personas, avatars designed to replicate a user’s facial expressions and hand gestures, have been set loose. The avatars can now roam freely in your virtual space, allowing them to look at, point to, and interact with, various ap…",
+      "url": "https://gizmodo.com/apple-vision-pros-creepy-avatars-invade-personal-space-1851382079",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/c62be6466d330b78f8fec853cfee1e92.png",
+      "publishedAt": "2024-04-02T18:00:00Z",
+      "content": "The Apple Vision Pros Spatial Personas, avatars designed to replicate a users facial expressions and hand gestures, have been set loose. The avatars can now roam freely in your virtual space, allowin… [+2326 chars]"
+    },
+    {
+      "source": { "id": null, "name": "[Removed]" },
+      "author": null,
+      "title": "[Removed]",
+      "description": "[Removed]",
+      "url": "https://removed.com",
+      "urlToImage": null,
+      "publishedAt": "1970-01-01T00:00:00Z",
+      "content": "[Removed]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Tim Hardwick",
+      "title": "Apple Still Plans MicroLED Apple Watch Ultra, Seeks New Suppliers",
+      "description": "Apple remains committed to microLED, despite recent reports that its project to bring the display technology to Apple Watch Ultra has been ditched.\n\n\n\n\n\nLast week, Apple supplier arms OSRAM announced that a \"cornerstone project\" was \"unexpectedly cancelled.\" …",
+      "url": "https://www.macrumors.com/2024/03/04/apple-still-dedicated-microled-apple-watch-ultra/",
+      "urlToImage": "https://images.macrumors.com/t/3ozjv0ZuRQN2pcJCES2-5Je9g8E=/3840x/article-new/2022/09/apple-watch-ultra-1-1.jpg",
+      "publishedAt": "2024-03-04T10:56:48Z",
+      "content": "Apple remains committed to microLED, despite recent reports that its project to bring the display technology to Apple Watch Ultra has been ditched, according to a new Taiwanese report.\r\nLast week, Ap… [+2525 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Sheena Vasani",
+      "title": "You can now preorder the new M3-powered MacBook Air",
+      "description": "Apple’s M3-powered MacBook Airs start shipping on March 8th, but they’re already available for preorder. Here’s what you should know about both the 13- and 15-inch models.",
+      "url": "https://www.theverge.com/24090194/apple-m3-macbook-air-13-15-inch-2024-preorder-how-to-buy-release-date-price",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/jpk-FhSV3aZmPpHRHFcLgdpdZXw=/0x0:1960x1102/1200x628/filters:focal(980x551:981x552)/cdn.vox-cdn.com/uploads/chorus_asset/file/25317890/Apple_MacBook_Air_lifestyle_gaming_240304_big.jpg.large_2x.jpg",
+      "publishedAt": "2024-03-04T19:03:14Z",
+      "content": "You can now preorder the new M3-powered MacBook Air\r\nYou can now preorder the new M3-powered MacBook Air\r\n / The 13- and 15-inch MacBook Air start at $1,099 and $1,299, respectively.\r\nBySheena Vasani… [+3432 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Announces WWDC 2024 Event for June 10 to 14",
+      "description": "Apple today announced that its 35th annual Worldwide Developers Conference is set to take place from Monday, June 10 to Friday, June 14. As with WWDC events since 2020, WWDC 2024 will be an online event that is open to all developers at no cost.\n\n\n\n\n\n‌WWDC 20…",
+      "url": "https://www.macrumors.com/2024/03/26/apple-announces-wwdc-2024/",
+      "urlToImage": "https://images.macrumors.com/t/yahN80_uEkCo0D5oQo0AC5TTZIQ=/1960x/article-new/2024/03/wwdc-2024-main-image.jpeg",
+      "publishedAt": "2024-03-26T17:02:39Z",
+      "content": "Apple today announced that its 35th annual Worldwide Developers Conference is set to take place from Monday, June 10 to Friday, June 14. As with WWDC events since 2020, WWDC 2024 will be an online ev… [+1629 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple's Website Finally Has 'Tech Specs' Pages for Apple Watch Models",
+      "description": "Apple this week added dedicated \"Tech Specs\" pages to its website for the Apple Watch Series 9, Apple Watch Ultra 2, and second-generation Apple Watch SE.\n\n\n\n\n\nThe pages offer a variety of information about the latest Apple Watch models, including details abo…",
+      "url": "https://www.macrumors.com/2024/03/30/apples-watch-tech-specs-pages/",
+      "urlToImage": "https://images.macrumors.com/t/GBQdcdJQVWopDyQh1iW7Psj9kcU=/2880x/article-new/2023/09/Apple-Watch-Series-9.jpg",
+      "publishedAt": "2024-03-30T18:25:02Z",
+      "content": "Apple this week added dedicated \"Tech Specs\" pages to its website for the Apple Watch Series 9, Apple Watch Ultra 2, and second-generation Apple Watch SE.\r\nThe pages offer a variety of information ab… [+362 chars]"
+    },
+    {
+      "source": { "id": "wired", "name": "Wired" },
+      "author": "Justin Pot",
+      "title": "How to Open Spotify Links If You Aren’t a Spotify User",
+      "description": "Your friends are always sharing Spotify links with you, but you don’t use Spotify. Here are four ways to translate that link into something that launches your preferred streaming app instead.",
+      "url": "https://www.wired.com/story/how-to-open-spotify-links-if-you-dont-have-spotify/",
+      "urlToImage": "https://media.wired.com/photos/65e6516ce67dff4ad47efa05/191:100/w_1280,c_limit/How-to-Open-Spotify-Links-Gear-GettyImages-1182106259.jpg",
+      "publishedAt": "2024-03-05T15:00:00Z",
+      "content": "Spotify dominates the music industry. This becomes really obvious if you don't use Spotify: You end up being sent, and inevitably clicking on, Spotify links all the time. It happens on social media, … [+1941 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Dua Rashid",
+      "title": "How To Use the Find My App to Find Your Lost iPhone",
+      "description": "With the goldfish memory I have, I leave my iPhone in the strangest places and forget where I saw it last. I’ve recovered my phone from the kitchen cabinets, inside dressing table drawers, and the closet. Thankfully, I’ve never had it stolen, but I’d want to …",
+      "url": "https://gizmodo.com/find-my-app-find-your-lost-iphone-1851326045",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/f48420475d444fdefcb830256c3931d8.png",
+      "publishedAt": "2024-03-11T23:00:00Z",
+      "content": "With the goldfish memory I have, I leave my iPhone in the strangest places and forget where I saw it last. Ive recovered my phone from the kitchen cabinets, inside dressing table drawers, and the clo… [+2219 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Florence Ion",
+      "title": "What You Really Want From the iPhone 16",
+      "description": "There is no iPhone 16 yet; it will not be until later this year. But people have their wishlists because when there’s talk of a possible update to their daily carry on the horizon, it inspires them to think of where they’d want to spend their money.Read more.…",
+      "url": "https://gizmodo.com/what-you-want-from-a-iphone-16-1851310618",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/eb9d94e543e112e309ecc259b7763afd.jpg",
+      "publishedAt": "2024-03-06T15:25:00Z",
+      "content": "There is no iPhone 16 yet; it will not be until later this year. But people have their wishlists because when theres talk of a possible update to their daily carry on the horizon, it inspires them to… [+3847 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Changes Trade-In Values for iPhones, iPads, and Apple Watches",
+      "description": "Apple today adjusted its estimated trade-in values for select iPhone, iPad, and Apple Watch models in the U.S., with the changes reflected on its website.\n\n\n\n\n\nApple slightly increased trade-in values for the iPhone 14 Pro Max, second-generation iPhone SE, Ap…",
+      "url": "https://www.macrumors.com/2024/03/06/apple-adjusts-trade-in-values-march-2024/",
+      "urlToImage": "https://images.macrumors.com/t/Qt_Jt5VhVFRnHs0-EqgV1suAQnY=/1600x/article-new/2023/06/iPhone-Trade-In-Box.jpg",
+      "publishedAt": "2024-03-06T16:42:39Z",
+      "content": "Apple today adjusted its estimated trade-in values for select iPhone, iPad, and Apple Watch models in the U.S., with the changes reflected on its website.\r\nApple slightly increased trade-in values fo… [+1041 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "Maxwell Zeff",
+      "title": "Call Her Daddy and Top Podcasts Are Gaming Their Follower Counts: Report",
+      "description": "Being a top 10 podcast has always been a tough game, but some podcasters are quite literally gaming the system. Nine of America’s top 50 podcasts, including Call Her Daddy, gave mobile game users points for interacting with their content, according to a Bloom…",
+      "url": "https://gizmodo.com/call-her-daddy-top-podcasts-gaming-follower-counts-1851374553",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d993be07fa035679a73f2a1b29bbfd52.jpg",
+      "publishedAt": "2024-03-29T16:25:00Z",
+      "content": "Being a top 10 podcast has always been a tough game, but some podcasters are quite literally gaming the system. Nine of Americas top 50 podcasts, including Call Her Daddy, gave mobile game users poin… [+2525 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Releases tvOS 17.4",
+      "description": "Apple today released tvOS 17.4, the fourth major update to the tvOS 17 operating system that came out last September. tvOS 17.4 comes over a month after the release of tvOS 17.3.\n\n\n\n\n\ntvOS 17.4 can be downloaded using the Settings app on the ‌Apple TV‌. Go to…",
+      "url": "https://www.macrumors.com/2024/03/07/apple-releases-tvos-17-4/",
+      "urlToImage": "https://images.macrumors.com/t/vOj7L5pjyFQ52crLtQ9BNDiGyJY=/2500x/article-new/2022/06/apple-tv-4k-red-image.jpg",
+      "publishedAt": "2024-03-07T18:06:00Z",
+      "content": "Apple today released tvOS 17.4, the fourth major update to the tvOS 17 operating system that came out last September. tvOS 17.4 comes over a month after the release of tvOS 17.3.\r\ntvOS 17.4 can be do… [+554 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Android Central" },
+      "author": "techkritiko@gmail.com (Jay Bonggolto)",
+      "title": "iPhone users in the EU can use Google Maps for default navigation starting next year",
+      "description": "Apple is letting iPhone users in Europe ditch Apple Maps and use Google Maps instead if they want.",
+      "url": "https://www.androidcentral.com/apps-software/iphone-users-in-eu-can-set-google-maps-as-default-navigation-app",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/yuBWmaqBPBVsNYRK3uPqHm-1200-80.jpg",
+      "publishedAt": "2024-03-11T19:40:10Z",
+      "content": "<ul><li>iPhone users in the EU will be able to replace Apple Maps with their preferred navigation app starting next year.</li><li>The change is part of Apple's compliance with the EU's Digital Market… [+2090 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Preparing to Sell Refurbished Ultra 2 and Series 9 Watches in U.S.",
+      "description": "Apple appears to be gearing up to sell refurbished Apple Watch Ultra 2 and Apple Watch Series 9 models on its online store in the U.S. for the first time.\n\n\n\n\n\nApple recently added grayed-out labels for the Ultra 2 and Series 9 to its desktop refurbished webs…",
+      "url": "https://www.macrumors.com/2024/03/19/refurbished-apple-watch-ultra-2-series-9-coming/",
+      "urlToImage": "https://images.macrumors.com/t/j9lfHW_qnx4RSnqtw-9s8ujUXyo=/2500x/article-new/2023/09/Apple-Watch-Ultra-2-hero-feature-white.jpg",
+      "publishedAt": "2024-03-19T17:13:29Z",
+      "content": "Apple appears to be gearing up to sell refurbished Apple Watch Ultra 2 and Apple Watch Series 9 models on its online store in the U.S. for the first time.\r\nApple recently added grayed-out labels for … [+1715 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Vision Pro Getting More Apple Arcade Games, Including Alto's Odyssey",
+      "description": "Apple today announced that three more Apple Arcade games will be available on the Vision Pro headset starting this Thursday, March 28.\n\n\n\n\n\nThe titles coming to the Vision Pro tomorrow include popular endless runner game Alto's Odyssey: The Lost City, hand-dr…",
+      "url": "https://www.macrumors.com/2024/03/27/more-apple-arcade-games-coming-to-vision-pro/",
+      "urlToImage": "https://images.macrumors.com/t/WXqhIdwMKf1DCSdx_lWj8zpYM04=/1960x/article-new/2024/03/Altos-Odyssey-The-Lost-City-Vision-Pro.jpeg",
+      "publishedAt": "2024-03-27T16:02:56Z",
+      "content": "Apple today announced that three more Apple Arcade games will be available on the Vision Pro headset starting this Thursday, March 28.\r\nThe titles coming to the Vision Pro tomorrow include popular en… [+1009 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Hartley Charlton",
+      "title": "Report: Apple Podcasts Favors Shows With Subscriptions",
+      "description": "Apple favors podcasts in its \"Browse\" tab that participate in its subscriptions program, according to Semafor.\n\n\n\n\n\nTo be featured at the top of Apple Podcasts' Browse tab, creators simply have to submit a form to Apple, but the report noted that, last week, …",
+      "url": "https://www.macrumors.com/2024/04/02/apple-podcasts-favors-subscription-shows/",
+      "urlToImage": "https://images.macrumors.com/t/IUbDJnUsl4oiGiI6bAWPZNTKD_Q=/2250x/article-new/2021/05/Podcasts-Feature.jpg",
+      "publishedAt": "2024-04-02T11:13:11Z",
+      "content": "Apple favors podcasts in its \"Browse\" tab that participate in its subscriptions program, according to Semafor.\r\nTo be featured at the top of Apple Podcasts' Browse tab, creators simply have to submit… [+1002 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Hartley Charlton",
+      "title": "watchOS 11 Rumored to Drop Support for Apple Watch Series 4",
+      "description": "Apple's upcoming watchOS 11 update will drop support for 2018's Apple Watch Series 4, according to iPhoneSoft.\n\n\n\n\n\nAfter five years of receiving the latest software updates, Apple Watch Series 3 lost support upon the release of watchOS 9 in 2022. Last year's…",
+      "url": "https://www.macrumors.com/2024/04/02/watchos-11-to-drop-support-for-series-4/",
+      "urlToImage": "https://images.macrumors.com/t/tFA05a4Qpp9dCSvcDXylDLn54rM=/1600x/article-new/2018/09/apple-watch-series-4-flames.jpg",
+      "publishedAt": "2024-04-02T13:34:47Z",
+      "content": "Apple's upcoming watchOS 11 update will drop support for 2018's Apple Watch Series 4, according to iPhoneSoft.\r\nAfter five years of receiving the latest software updates, Apple Watch Series 3 lost su… [+1257 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Says iPhone 6 Plus Now 'Obsolete' and iPad Mini 4 Now 'Vintage'",
+      "description": "Apple today added a handful of devices to its public-facing vintage and obsolete products list, including some older iPhone and iPad models.\n\n\n\n\n\nApple now considers the iPhone 6 Plus to be \"obsolete\" worldwide, meaning that Apple Stores and Apple Authorized …",
+      "url": "https://www.macrumors.com/2024/04/01/apple-says-iphone-6-plus-is-now-obsolete/",
+      "urlToImage": "https://images.macrumors.com/t/BsPj5BCIsO4_cAElsBUmARNQ1j4=/1920x/article-new/2021/12/a-iphone-6-plus-ad.jpg",
+      "publishedAt": "2024-04-01T13:42:08Z",
+      "content": "Apple today added a handful of devices to its public-facing vintage and obsolete products list, including some older iPhone and iPad models.\r\nApple now considers the iPhone 6 Plus to be \"obsolete\" wo… [+1161 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Leadership Talks iPhone While Riding Golf Cart Around Apple Park",
+      "description": "Apple's marketing chief Greg Joswiak, vice president of iPhone marketing Kaiann Drance, and a few other senior employees at the company recently participated in a ride-along interview with YouTube video creator Brian Tong.\n\n\n\nGreg Joswiak talks with Brian Ton…",
+      "url": "https://www.macrumors.com/2024/03/20/apple-park-golf-cart-interview/",
+      "urlToImage": "https://images.macrumors.com/t/MQa8J706GSC8Zv4-yCfT8y_V0Cw=/1916x/article-new/2024/03/Apple-Park-Brian-Tong.jpg",
+      "publishedAt": "2024-03-20T15:47:00Z",
+      "content": "Apple's marketing chief Greg Joswiak, vice president of iPhone marketing Kaiann Drance, and a few other senior employees at the company recently participated in a ride-along interview with YouTube vi… [+636 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Android Central" },
+      "author": "bradypsnyder@gmail.com (Brady Snyder)",
+      "title": "Apple Music won't work on rooted Android devices, following Google's footsteps",
+      "description": "Following Google's move to block RCS messages from sending on rooted Android phones, Apple has taken similar measures with Apple Music.",
+      "url": "https://www.androidcentral.com/apps-software/apple-music-wont-work-on-rooted-android-devices-following-googles-footsteps",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/EdH3ZAKYo5zNEs8LxVMKHg-1200-80.jpg",
+      "publishedAt": "2024-03-06T15:15:16Z",
+      "content": "<ul><li>The Apple Music app for Android no longer works on rooted devices; instead, it displays an error message.</li><li>Some users have already found workarounds, like the MagiskHide tool, that wil… [+2844 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Gizmodo.com" },
+      "author": "David Nield",
+      "title": "7 Tips To Make You a Google Gemini Expert",
+      "description": "Google Gemini (previously Google Bard) is the name of both Google’s AI models and the apps that we use to interface with them. With updates rolling out regularly, Gemini is Google’s answer to OpenAI ChatGPT, Microsoft Copilot, whatever it is that Apple is wor…",
+      "url": "https://gizmodo.com/google-gemini-tips-1851323928",
+      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/402e001b5deacefd3190ea5ef0cadb0a.jpg",
+      "publishedAt": "2024-03-12T10:30:00Z",
+      "content": "Google Gemini (previously Google Bard) is the name of both Googles AI models and the apps that we use to interface with them. With updates rolling out regularly, Gemini is Googles answer to OpenAI Ch… [+4233 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Releases macOS Sonoma 14.4",
+      "description": "Apple today released macOS Sonoma 14.4, the fourth major update to the ‌macOS Sonoma‌ operating system that launched last September. ‌macOS Sonoma‌ 14.4 comes over a month after ‌macOS Sonoma‌ 14.3, an update that brought collaborative Apple Music playlists. …",
+      "url": "https://www.macrumors.com/2024/03/07/apple-releases-macos-sonoma-14-4/",
+      "urlToImage": "https://images.macrumors.com/t/hlTPUK2T2TO3h1-KxJcbOulRzRY=/1600x/article-new/2023/06/sonoma-desktop-wwdc.jpg",
+      "publishedAt": "2024-03-07T18:14:08Z",
+      "content": "Apple today released macOS Sonoma 14.4, the fourth major update to the ‌macOS Sonoma‌ operating system that launched last September. ‌macOS Sonoma‌ 14.4 comes over a month after ‌macOS Sonoma‌ 14.3, … [+1830 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "WWDC 2024 Will Include In-Person Special Event at Apple Park",
+      "description": "While Apple does not plan to hold a traditional in-person WWDC event this year, the company will invite select developers and students to attend a special event at the Apple Park campus in Cupertino, California.\n\n\n\n\n\nOn Monday, June 10, Apple will host a keyn…",
+      "url": "https://www.macrumors.com/2024/03/26/wwdc-2024-apple-park-special-event/",
+      "urlToImage": "https://images.macrumors.com/t/efTLSdD7cCUtBW9sMbipBxFp_Ow=/1600x/article-new/2024/03/apple-park-special-event-2024.jpg",
+      "publishedAt": "2024-03-26T19:12:31Z",
+      "content": "While Apple does not plan to hold a traditional in-person WWDC event this year, the company will invite select developers and students to attend a special event at the Apple Park campus in Cupertino,… [+3205 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Tim Hardwick",
+      "title": "Apple Maps Cycling Directions Expand to Belgium",
+      "description": "Apple Maps has expanded the availability of cycling routes in Europe by adding support for the country of Belgium.\n\n\n\n\n\nApple first added cycling directions to ‌Apple Maps‌ in iOS 14, providing specific directions for bike riders with bike lanes, bike paths, …",
+      "url": "https://www.macrumors.com/2024/03/12/apple-maps-cycling-directions-expand-to-belgium/",
+      "urlToImage": "https://images.macrumors.com/t/2MJuux6et0IutAiahCwjAA7_4aA=/1920x/article-new/2024/03/belgium-apple-maps-cycling-routes.jpg",
+      "publishedAt": "2024-03-12T09:58:25Z",
+      "content": "Apple Maps has expanded the availability of cycling routes in Europe by adding support for the country of Belgium.\r\nApple first added cycling directions to ‌Apple Maps‌ in iOS 14, providing specific … [+555 chars]"
+    },
+    {
+      "source": { "id": null, "name": "[Removed]" },
+      "author": null,
+      "title": "[Removed]",
+      "description": "[Removed]",
+      "url": "https://removed.com",
+      "urlToImage": null,
+      "publishedAt": "1970-01-01T00:00:00Z",
+      "content": "[Removed]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Mitchel Broussard",
+      "title": "Apple Watch Ultra 2 Drops to New All-Time Low Price of $663.99",
+      "description": "We're tracking a new record low price on the Apple Watch Ultra 2 today at Amazon, available for $663.99, down from $799.00. Only the Indigo Alpine Loop in size medium is available at this best-ever price on Amazon.\n\n\n\nNote: MacRumors is an affiliate partner w…",
+      "url": "https://www.macrumors.com/2024/03/05/apple-watch-ultra-2-new-low/",
+      "urlToImage": "https://images.macrumors.com/t/AtVTIwOXVQvqTdzRP2RnitWb71U=/2500x/article-new/2024/03/apple-watch-ultra-2-purple.jpg",
+      "publishedAt": "2024-03-05T14:44:20Z",
+      "content": "We're tracking a new record low price on the Apple Watch Ultra 2 today at Amazon, available for $663.99, down from $799.00. Only the Indigo Alpine Loop in size medium is available at this best-ever p… [+1209 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Aaron Perris",
+      "title": "Apple Vision Pro Likely to Launch in These Nine Countries Next",
+      "description": "Apple will soon add 12 new languages to the virtual keyboard on the Vision Pro, based on code discovered by MacRumors. Right now, the Apple Vision Pro keyboard only supports English (US) and Emoji, which makes sense as it is limited to the United States.\n\n\n\n\n…",
+      "url": "https://www.macrumors.com/2024/03/13/vision-pro-keyboard-new-languages/",
+      "urlToImage": "https://images.macrumors.com/t/m4fncitF_AkKvkmVPgmxVXUTJaw=/1600x/article-new/2024/01/apple-vision-pro-virtual-keyboard.jpg",
+      "publishedAt": "2024-03-13T23:55:37Z",
+      "content": "Apple will soon add 12 new languages to the virtual keyboard on the Vision Pro, based on code discovered by MacRumors. Right now, the Apple Vision Pro keyboard only supports English (US) and Emoji, w… [+917 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Hartley Charlton",
+      "title": "'Critical' Chinese Apps Coming to Apple Vision Pro",
+      "description": "Chinese tech giant Tencent has agreed to make some of its most important apps available on Apple's Vision Pro headset ahead of its launch in the country later this year, The Information reports.\n\n\n\n\n\nTencent is one of the biggest multimedia companies in the w…",
+      "url": "https://www.macrumors.com/2024/03/26/chinese-apps-coming-to-vision-pro/",
+      "urlToImage": "https://images.macrumors.com/t/fcmMskXHJGRXUTKwo4cFfNcDp0E=/1920x/article-new/2023/11/apple-vision-pro-eye.jpg",
+      "publishedAt": "2024-03-26T13:45:10Z",
+      "content": "Chinese tech giant Tencent has agreed to make some of its most important apps available on Apple's Vision Pro headset ahead of its launch in the country later this year, The Information reports.\r\nTen… [+1007 chars]"
+    },
+    {
+      "source": { "id": null, "name": "[Removed]" },
+      "author": null,
+      "title": "[Removed]",
+      "description": "[Removed]",
+      "url": "https://removed.com",
+      "urlToImage": null,
+      "publishedAt": "1970-01-01T00:00:00Z",
+      "content": "[Removed]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "These New Games Are Coming to Apple Arcade Next Month",
+      "description": "Apple today announced that three new games will be coming to Apple Arcade on April 4, including Puyo Puyo Puzzle Pop, Super Monsters Ate My Condo+, and Sago Mini Trips+. In addition, the existing Apple Arcade games Crossy Road Castle and Solitaire Stories wil…",
+      "url": "https://www.macrumors.com/2024/03/12/apple-arcade-new-games-april-2024/",
+      "urlToImage": "https://images.macrumors.com/t/QRY5GAh3UaSt6UrszdSM6KkwfLg=/1960x/article-new/2024/03/Apple-Arcade-April-2024.jpg",
+      "publishedAt": "2024-03-12T13:25:40Z",
+      "content": "Apple today announced that three new games will be coming to Apple Arcade on April 4, including Puyo Puyo Puzzle Pop, Super Monsters Ate My Condo+, and Sago Mini Trips+. In addition, the existing App… [+742 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple's First Store in Canada With Dedicated Pickup Station Now Open",
+      "description": "Apple has a new home at Canada's second-largest indoor shopping mall. Following months of construction, the new Apple Square One retail store opened its doors today in Mississauga, Ontario, just west of Toronto. The store is now located above the Food Central…",
+      "url": "https://www.macrumors.com/2024/03/23/relocated-apple-square-one-opens/",
+      "urlToImage": "https://images.macrumors.com/t/rY6PvQ4LLynTO5SxqM-1RMnfP6Q=/1600x/article-new/2024/03/Apple-Square-One-2024.jpg",
+      "publishedAt": "2024-03-23T20:40:52Z",
+      "content": "Apple has a new home at Canada's second-largest indoor shopping mall. Following months of construction, the new Apple Square One retail store opened its doors today in Mississauga, Ontario, just west… [+1862 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Tim Cook Visits China Ahead of New Apple Store Opening in Shanghai",
+      "description": "Apple CEO Tim Cook is touring Shanghai, China this week, meeting with retail employees, suppliers, developers, the film industry, and others. He has been sharing photos from his trip on Chinese social media platform Weibo.\n\n\n\n\n\nCook's visit is timed with the …",
+      "url": "https://www.macrumors.com/2024/03/20/tim-cook-visits-shanghai/",
+      "urlToImage": "https://images.macrumors.com/t/Jkcb0X5kFeqx4hd1J6Dw_ivFBLU=/1600x/article-new/2024/03/Tim-Cook-Shanghai.jpeg",
+      "publishedAt": "2024-03-20T13:54:26Z",
+      "content": "Apple CEO Tim Cook is touring Shanghai, China this week, meeting with retail employees, suppliers, developers, the film industry, and others. He has been sharing photos from his trip on Chinese socia… [+1125 chars]"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Aaron Mok",
+      "title": "Ex-Apple leader says iPhone maker is in a 'battle for the soul' as it goes up against the DOJ",
+      "description": "Ex-Apple employee Michael Gartenberg says Apple is fighting for its \"soul\" amid the DOJ's anti-trust lawsuit, per WSJ.",
+      "url": "https://www.businessinsider.com/ex-apple-insider-says-company-is-in-battle-for-soul-2024-3",
+      "urlToImage": "https://i.insider.com/65a51a39dcdb354a98578864?width=1200&format=jpeg",
+      "publishedAt": "2024-03-28T08:05:01Z",
+      "content": "A former Apple employee said that anti-trust probes against Apple have the company in a \"battle for the soul.\"NurPhoto/ Getty\r\n<ul><li>A former Apple employee says the company is facing a \"battle for… [+3156 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Mitchel Broussard",
+      "title": "Amazon Discounts 2nd Gen Apple Watch SE to Just $189",
+      "description": "Amazon today has the 40mm GPS Apple Watch SE for $189.00, which is just $10 higher compared to its all-time low price. This deal is available in the Silver Aluminum Case with Winter Blue Sport Loop and Midnight Aluminum Case with Midnight Sport Loop, and only…",
+      "url": "https://www.macrumors.com/2024/03/13/2nd-gen-apple-watch-se-189/",
+      "urlToImage": "https://images.macrumors.com/t/Bmo7b8sjVnNKYFgsZbvjktlYuOU=/2500x/article-new/2022/09/apple-watch-se-2022.jpg",
+      "publishedAt": "2024-03-13T14:53:13Z",
+      "content": "Amazon today has the 40mm GPS Apple Watch SE for $189.00, which is just $10 higher compared to its all-time low price. This deal is available in the Silver Aluminum Case with Winter Blue Sport Loop a… [+1041 chars]"
+    },
+    {
+      "source": { "id": "ars-technica", "name": "Ars Technica" },
+      "author": "Ashley Belanger",
+      "title": "Spotify wins as EU orders Apple to pay $2B and change App Store rules",
+      "description": "Apple plans to appeal, insisting there's no evidence of consumer harms.",
+      "url": "https://arstechnica.com/tech-policy/2024/03/apple-to-pay-2b-after-eu-finds-app-store-abusive-siding-with-spotify/",
+      "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2024/03/GettyImages-1242120707-760x380.jpg",
+      "publishedAt": "2024-03-04T17:30:09Z",
+      "content": "23\r\nThe European Commission (EC) has sided with Spotify, fining Apple nearly $2 billion for abusive App Store restrictions on developers that it found violated antitrust laws by degrading music strea… [+4564 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Android Central" },
+      "author": "nandika.iyerravi@futurenet.com (Nandika Ravi)",
+      "title": "US sues Apple over illegal 'iPhone monopoly'",
+      "description": "The DOJ and several district attorneys are suing Apple in a massive 'antitrust' lawsuit for dominating the smartphone market",
+      "url": "https://www.androidcentral.com/phones/us-doj-sues-apple-iphone-monopoly",
+      "urlToImage": "https://dev.mos.cms.futurecdn.net/nrnxy8PfmNi4agxLQGyBK-1200-80.jpg",
+      "publishedAt": "2024-03-21T19:36:44Z",
+      "content": "What you need to know\r\n<ul><li>The U.S DOJ is accusing Apple of illegally monopolizing the smartphone market by not incorporating cross-platform services so that consumers continue to depend on their… [+5201 chars]"
+    },
+    {
+      "source": { "id": "ars-technica", "name": "Ars Technica" },
+      "author": "Samuel Axon",
+      "title": "WWDC 2024 starts on June 10 with announcements about iOS 18 and beyond",
+      "description": "Speculation is rampant that Apple will make its first big moves in generative AI.",
+      "url": "https://arstechnica.com/gadgets/2024/03/wwdc-2024-starts-on-june-10-with-announcements-about-ios-18-and-beyond/",
+      "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2024/03/wwdc-2024-main-image-760x380.jpeg",
+      "publishedAt": "2024-03-26T19:02:50Z",
+      "content": "Enlarge/ The logo for WWDC24.\r\n13\r\nApple has announced dates for this year's Worldwide Developers Conference (WWDC). WWDC24 will run from June 10 through June 14 at the company's Cupertino headquarte… [+1804 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Hartley Charlton",
+      "title": "All-New Apple Watch Hermès 'Tricot' Knitted Band Released",
+      "description": "Apple and Hermès today released an all-new knitted \"Tricot\" Apple Watch band, available in four color options.\n\n\n\n\n\nApple describes the Tricot Single Tour as \"a knitted textile band that comfortably hugs the wrist like a glove.\" It is available as a single to…",
+      "url": "https://www.macrumors.com/2024/03/04/apple-watch-hermes-tricot-released/",
+      "urlToImage": "https://images.macrumors.com/t/tI--bJLWmeHxnBdtQH0fccVRd1A=/2500x/article-new/2024/03/Herm%C3%A8s-Tricot-Single-Tour-Feature.jpg",
+      "publishedAt": "2024-03-04T14:33:36Z",
+      "content": "Apple and Hermès today released an all-new knitted \"Tricot\" Apple Watch band, available in four color options.\r\nApple describes the Tricot Single Tour as \"a knitted textile band that comfortably hugs… [+2053 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Seeds visionOS 1.1 Release Candidate",
+      "description": "Apple today seeded the release candidate version of an upcoming visionOS 1.1 update for developers, allowing them to test new features ahead of the software seeing a public launch. The new update comes a week after the release of the fourth beta.\n\n\n\n\n\nThe ‌vi…",
+      "url": "https://www.macrumors.com/2024/03/04/visionos-1-1-release-candidate/",
+      "urlToImage": "https://images.macrumors.com/t/BO4kPTSqY2ytaxPGR56Os77ZBdM=/1920x/article-new/2024/02/visionOS-Home-Screen.jpg",
+      "publishedAt": "2024-03-04T18:05:32Z",
+      "content": "Apple today seeded the release candidate version of an upcoming visionOS 1.1 update for developers, allowing them to test new features ahead of the software seeing a public launch. The new update com… [+889 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Discontinues MacBook Air With M1 Chip",
+      "description": "Apple today discontinued the 13-inch MacBook Air with the M1 chip, first released in November 2020.\n\n\n\n\n\nMore details to follow…Related Roundup: MacBook AirBuyer's Guide: 15\" MacBook Air (Don't Buy), 13\" MacBook Air (Don't Buy)Related Forum: MacBook AirThis a…",
+      "url": "https://www.macrumors.com/2024/03/04/apple-discontinues-m1-macbook-air/",
+      "urlToImage": "https://images.macrumors.com/t/mFX7xFi-HdaiI5pQOVcSXA26F7g=/1616x/article-new/2020/11/macbook-air-m1-unboxing-feature.jpg",
+      "publishedAt": "2024-03-04T13:08:21Z",
+      "content": "Stolen Device Protection, collaborative Apple Music playlists, AirPlay to hotel TVs, and more."
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Joe Rossignol",
+      "title": "Apple Explains Why It Terminated Epic's Latest Developer Account",
+      "description": "Apple today said it has terminated Epic Games Sweden's developer account worldwide due to the game developer's pattern of untrustworthy behavior.\n\n\n\n\n\nApple shared the following statement with MacRumors:Epic's egregious breach of its contractual obligations t…",
+      "url": "https://www.macrumors.com/2024/03/06/apple-explains-terminating-epic-games-account/",
+      "urlToImage": "https://images.macrumors.com/t/-CV6eWobN2rZ-9lCcbnibyTCe2I=/1794x/article-new/2021/05/app-store-blue-banner-epic-1.jpg",
+      "publishedAt": "2024-03-06T17:40:49Z",
+      "content": "Apple today said it has terminated Epic Games Sweden's developer account worldwide due to the game developer's pattern of untrustworthy behavior.\r\nApple shared the following statement with MacRumors:… [+1090 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Seeds First Beta of watchOS 10.5 to Developers",
+      "description": "Apple today seeded the first beta of an upcoming watchOS 10.5 update to developers for testing purposes, with the beta coming a month after the release of watchOS 10.4.\n\n\n\n\n\nTo install the ‌watchOS 10.5 update, developers need to open the Apple Watch app, go …",
+      "url": "https://www.macrumors.com/2024/04/02/apple-seeds-watchos-10-5-beta-1-to-developers/",
+      "urlToImage": "https://images.macrumors.com/t/T9LvCyX5TC3cEOOFDRFgVrtLZTs=/1920x/article-new/2023/06/Apple-Watch-Faces-watchOS-10-Feature-Blue.jpg",
+      "publishedAt": "2024-04-02T17:07:00Z",
+      "content": "Apple today seeded the first beta of an upcoming watchOS 10.5 update to developers for testing purposes, with the beta coming a month after the release of watchOS 10.4.\r\nTo install the watchOS 10.5 u… [+560 chars]"
+    },
+    {
+      "source": { "id": null, "name": "MacRumors" },
+      "author": "Juli Clover",
+      "title": "Apple Releases visionOS 1.1.1 With Bug Fixes",
+      "description": "Apple today released visionOS 1.1.1, a minor update to the ‌visionOS‌ operating system that came out in February. ‌visionOS‌ 1.1.1 comes two weeks after the launch of visionOS 1.1.\n\n\n\n\n\n‌visionOS‌ updates can be installed by going to the Settings app on the V…",
+      "url": "https://www.macrumors.com/2024/03/21/apple-releases-visionos-1-1-1-with-bug-fixes/",
+      "urlToImage": "https://images.macrumors.com/t/BO4kPTSqY2ytaxPGR56Os77ZBdM=/1920x/article-new/2024/02/visionOS-Home-Screen.jpg",
+      "publishedAt": "2024-03-21T17:10:33Z",
+      "content": "Apple today released visionOS 1.1.1, a minor update to the ‌visionOS‌ operating system that came out in February. ‌visionOS‌ 1.1.1 comes two weeks after the launch of visionOS 1.1.\r\n‌visionOS‌ update… [+426 chars]"
+    }
+  ]
+}
+     console.log(response)
+
+        let str = ""
+        
+        for (let item of response.articles){
+          str = str + `<div class="card my-4 mx-2" style="width: 18rem">
+        <img src="${item.urlToImage}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">${item.title}</h5>
+          <p class="card-text">
+            ${item.description}
+          </p>
+          <a href="${item.url}" target="_blank" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>` 
+    }
+    document.querySelector(".content").innerHTML = str
+      }
+      fetchNews(1);
+    </script>
+  </body>
+</html>
